@@ -39,22 +39,32 @@ vms-backend/
 ## 🚀 Quick Start (Development)
 
 ### 1. Start Local Database
+
 ```bash
 docker compose up -d
 ```
+
 This starts:
+
 - **PostgreSQL**: `localhost:5432` (`vms_db` / `vms_user` / `vms_password`)
 - **pgAdmin**: `http://localhost:5050` (`admin@vms.local` / `admin123`)
 
 ### 2. Run the Spring Boot Application
+
 ```bash
 mvn spring-boot:run
 ```
+
 The API server starts at: `http://localhost:8080/api/v1`
 Interactive Swagger UI: `http://localhost:8080/api/v1/swagger-ui.html`
 
 ---
 
 ## 🔒 Separation of Concerns Rule
+
 - **Never couple or merge with `vms-frontend`**: All interactions must happen exclusively through standard REST endpoints and JSON DTOs.
 - Domain features should be organized in clean modules under `com.vms.backend.modules.<feature>`.
+
+# vms-backend
+
+Java Spring Boot backend for the Stark Group Vehicle Management System
