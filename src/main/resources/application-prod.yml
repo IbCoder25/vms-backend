@@ -14,3 +14,19 @@ logging:
   level:
     root: WARN
     com.vms.backend: INFO
+
+app:
+  cors:
+    allowed-origins:
+      - "https://whimsical-hamster-e2daa2.netlify.app"
+    allowed-methods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "PATCH"
+      - "DELETE"
+      - "OPTIONS"
+    allowed-headers:
+      - "*"
+    allow-credentials: true
+    max-age: 3600
